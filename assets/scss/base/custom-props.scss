@@ -1,0 +1,61 @@
+@use "../utils";
+
+:root {
+    --color-black: #000;
+    --color-white: #fff;
+    --color-orange: #e07b1a;
+
+    --color-text: var(--color-black);
+    --color-borders: var(--color-black);
+
+    --btn-text-color: var(--color-black);
+    --btn-text-color--hover: var(--color-black);
+
+    --content-max-width: min(calc(100vw - var(--container-padding)*2), 930px);
+    --container-max-width: 1600px;
+    --container-padding: clamp(24px, 6vw, 96px);
+
+    --font-family-base: sans-serif;
+
+    --line-height-base: 1.5;
+    --gap: #{utils.makeClamp(23, 30)};
+    --transitions: 0.3s;
+
+    --font-size-base: 1rem;
+    --font-size-h1: #{utils.makeClamp(50, 100)};
+    --font-size-h2: #{utils.makeClamp(40, 80)};
+    --font-size-h3: #{utils.makeClamp(24, 40)};
+    --font-size-h4: #{utils.makeClamp(20, 32)};
+    --font-size-h5: #{utils.makeClamp(18, 24)};
+    --font-size-h6: 1rem;
+    --font-size-small: .875rem;
+    --font-size-micro: #{utils.makeRem(14)};
+
+    --spacing-0: 0;
+    --spacing-1: #{utils.makeClamp(5, 10)};
+    --spacing-2: #{utils.makeClamp(10, 20)};
+    --spacing-3: #{utils.makeClamp(15, 30)};
+    --spacing-4: #{utils.makeClamp(20, 40)};
+    --spacing-5: #{utils.makeClamp(25, 50)};
+    --spacing-6: #{utils.makeClamp(30, 60)};
+    --spacing-7: #{utils.makeClamp(35, 70)};
+    --spacing-8: #{utils.makeClamp(40, 80)};
+    --spacing-9: #{utils.makeClamp(45, 90)};
+    --spacing-10: #{utils.makeClamp(50, 100)};
+    --spacing-11: #{utils.makeClamp(55, 110)};
+    --spacing-12: #{utils.makeClamp(60, 120)};
+    --spacing-13: #{utils.makeClamp(65, 130)};
+    --spacing-14: #{utils.makeClamp(70, 140)};
+    --spacing-15: #{utils.makeClamp(75, 150)};
+    --spacing-16: #{utils.makeClamp(80, 160)};
+    --spacing-17: #{utils.makeClamp(85, 170)};
+    --spacing-18: #{utils.makeClamp(90, 180)};
+    --spacing-19: #{utils.makeClamp(95, 190)};
+    --spacing-20: #{utils.makeClamp(100, 200)};
+
+    --site-header-height: 100px;
+}
+
+body {
+    --wp--style--global--content-size: var(--content-max-width);
+}

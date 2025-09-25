@@ -1,0 +1,68 @@
+@use "utils";
+@use "sass:meta";
+@use "base/custom-props";
+
+:root :where(.wp-block-image.is-style-rounded img, .wp-block-image .is-style-rounded img) {
+    border-radius: 10px;
+}
+
+.wp-block-post-title {
+    line-height: 1.1;
+    font-family: sans-serif;
+    max-width: var(--content-max-width);
+    margin-inline: auto;
+}
+
+.block-editor-default-block-appender__content {
+    font-family: sans-serif;
+}
+
+.editor-styles-wrapper {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+}
+
+.editor-visual-editor__post-title-wrapper {
+    margin-inline: 15px;
+}
+
+.editor-styles-wrapper .is-root-container {
+    max-width: 100%;
+    margin-inline: 15px;
+
+    @include meta.load-css("elements");
+    @include meta.load-css('components/index');
+    @include meta.load-css('elements/index');
+    @include meta.load-css('views/index');
+    @include meta.load-css("base/modifiers");
+    @include meta.load-css("base/fonts");
+
+    > * {
+        max-width: var(--content-max-width);
+        margin-inline: auto;
+
+        &.alignwide {
+            @include utils.makeContainer;
+        }
+    }
+
+    > .block-library-block__reusable-block-container {
+        max-width: 100%;
+    }
+
+    // nothign on the site is truly 100%
+    > .alignfull {
+        max-width: var(--container-max-width) !important;
+        margin-inline: auto;
+    }
+
+    a {
+        color: currentColor;
+        pointer-events: none;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}

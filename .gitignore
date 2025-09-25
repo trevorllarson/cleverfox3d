@@ -1,0 +1,35 @@
+##### Global ignores #####
+.DS_Store
+.svn
+.idea
+*.orig
+*.log
+.vscode/*
+.env
+
+##### Build tool files #####
+config.codekit
+.sass-cache
+.sass-cache/*
+node_modules
+node_modules/*
+bower_components
+bower_components/*
+
+##### WordPress #####
+wp-config.php
+src/wp-content/debug.log
+src/wp-content/ewww/
+src/wp-content/upgrade/
+src/wp-content/upgrade-temp-backup/
+src/wp-content/uploads/*
+!src/wp-content/uploads/empty
+
+#Wordfence
+src/wp-content/wflogs
+
+# W3TC plugin contents
+src/wp-content/cache/*
+src/wp-content/w3tc-config/*
+
+uploads.zip

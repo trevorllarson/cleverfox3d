@@ -1,0 +1,25 @@
+{
+	"main": "webpack.mix.js",
+	"scripts": {
+		"watch": "npx mix watch",
+		"production": "npx mix --production",
+		"prod": "npx mix --production"
+	},
+	"license": "MIT",
+	"private": true,
+	"devDependencies": {
+		"browser-sync": "^2.27.5",
+		"browser-sync-webpack-plugin": "^2.3.0",
+		"dotenv": "^14.3.2",
+		"laravel-mix": "^6.0.39",
+		"laravel-mix-purgecss": "^6.0.0",
+		"purgecss-with-wordpress": "^4.1.0",
+		"resolve-url-loader": "^5.0.0",
+		"sass": "^1.37.5",
+		"sass-loader": "^12.1.0"
+	},
+	"dependencies": {
+		"a11y-dialog": "^8.0.4",
+		"swiper": "^11.1.9"
+	}
+}

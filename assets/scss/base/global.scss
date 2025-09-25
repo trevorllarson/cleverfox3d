@@ -1,0 +1,100 @@
+@use "sass:meta";
+@use "../utils";
+
+* {
+    box-sizing: border-box;
+}
+
+*:focus-visible {
+    @include utils.focusStyle;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--site-header-height);
+}
+
+body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--color-text);
+    overflow-x: hidden;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+}
+
+[href="#site-main"] {
+    position: absolute;
+    z-index: 1000;
+}
+
+.screen-reader-text,
+.visuallyHidden,
+.visuallyHidden-focusable:not(:focus):not(:focus-within) {
+    @include utils.visuallyHidden;
+}
+
+a {
+    transition: var(--transitions);
+}
+
+// this isn't included in buttons.scss to protect admin buttons
+button,
+[type="submit"] {
+    @include utils.resetButton;
+}
+
+figure {
+    // wordpress doesn't give you any way to control margins on figures, so we'll have to add spacing with other sibling elements
+    margin: 0;
+}
+
+video,
+svg,
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+svg *:focus {
+    outline: none;
+}
+
+picture {
+    display: block;
+}
+
+p,
+ol,
+ul,
+dl,
+table,
+blockquote {
+    margin-block: .75em 1.25em;
+}
+
+strong {
+    font-weight: 700;
+}
+
+address {
+    font-style: normal;
+}
+
+.wp-block-separator.wp-block-separator,
+hr {
+    margin-top: 0;
+    border: 0;
+    border-top: solid 1px var(--color-borders);
+}
+
+.not-found {
+    padding-block: var(--spacing-10);
+    text-align: center;
+}

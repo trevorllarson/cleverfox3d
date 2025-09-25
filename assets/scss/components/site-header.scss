@@ -1,0 +1,9 @@
+@use "../utils";
+
+#site-header {}
+
+#site-navigation-open {
+    @media (min-width: #{utils.getBreakpoint('lg')}) {
+        display: none;
+    }
+}

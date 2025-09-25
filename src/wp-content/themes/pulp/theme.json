@@ -1,0 +1,266 @@
+{
+    "version": 2,
+    "settings": {
+        "appearanceTools": true,
+        "border": {
+            "radius": false,
+            "color": false,
+            "style": false,
+            "width": false
+        },
+        "color": {
+            "custom": false,
+            "customDuotone": false,
+            "customGradient": false,
+            "link": false,
+            "duotone": [],
+            "palette": [
+                {
+                    "slug": "white",
+                    "color": "#fff",
+                    "name": "White"
+                }
+            ],
+            "gradients": [],
+            "defaultGradients": false,
+            "defaultPalette": false
+        },
+        "layout": {
+            "contentSize": "930px",
+            "wideSize": "1410px"
+        },
+        "spacing": {
+            "spacingScale": {
+                "steps": 0
+            },
+            "customSpacingSize": false,
+            "spacingSizes": [
+                {
+                    "name": "1",
+                    "size": "var(--spacing-1)",
+                    "slug": "10"
+                },
+                {
+                    "name": "2",
+                    "size": "var(--spacing-2)",
+                    "slug": "20"
+                },
+                {
+                    "name": "3",
+                    "size": "var(--spacing-3)",
+                    "slug": "30"
+                },
+                {
+                    "name": "4",
+                    "size": "var(--spacing-4)",
+                    "slug": "40"
+                },
+                {
+                    "name": "5",
+                    "size": "var(--spacing-5)",
+                    "slug": "50"
+                },
+                {
+                    "name": "6",
+                    "size": "var(--spacing-6)",
+                    "slug": "60"
+                },
+                {
+                    "name": "7",
+                    "size": "var(--spacing-7)",
+                    "slug": "70"
+                },
+                {
+                    "name": "8",
+                    "size": "var(--spacing-8)",
+                    "slug": "80"
+                },
+                {
+                    "name": "9",
+                    "size": "var(--spacing-9)",
+                    "slug": "90"
+                },
+                {
+                    "name": "10",
+                    "size": "var(--spacing-10)",
+                    "slug": "100"
+                },
+                {
+                    "name": "11",
+                    "size": "var(--spacing-11)",
+                    "slug": "110"
+                },
+                {
+                    "name": "12",
+                    "size": "var(--spacing-12)",
+                    "slug": "120"
+                },
+                {
+                    "name": "13",
+                    "size": "var(--spacing-13)",
+                    "slug": "130"
+                },
+                {
+                    "name": "14",
+                    "size": "var(--spacing-14)",
+                    "slug": "140"
+                },
+                {
+                    "name": "15",
+                    "size": "var(--spacing-15)",
+                    "slug": "150"
+                },
+                {
+                    "name": "16",
+                    "size": "var(--spacing-16)",
+                    "slug": "160"
+                },
+                {
+                    "name": "17",
+                    "size": "var(--spacing-17)",
+                    "slug": "170"
+                },
+                {
+                    "name": "18",
+                    "size": "var(--spacing-18)",
+                    "slug": "180"
+                },
+                {
+                    "name": "19",
+                    "size": "var(--spacing-19)",
+                    "slug": "190"
+                },
+                {
+                    "name": "20",
+                    "size": "var(--spacing-20)",
+                    "slug": "200"
+                }
+            ]
+        },
+        "typography": {
+            "customFontSize": false,
+            "dropCap": false,
+            "fluid": false,
+            "fontStyle": false,
+            "fontWeight": false,
+            "letterSpacing": false,
+            "textDecoration": false,
+            "textTransform": false,
+            "fontSizes": [
+                {
+                    "slug": "h1",
+                    "size": "var(--font-size-h1)",
+                    "name": "Heading 1"
+                },
+                {
+                    "slug": "h2",
+                    "size": "var(--font-size-h2)",
+                    "name": "Heading 2"
+                },
+                {
+                    "slug": "h3",
+                    "size": "var(--font-size-h3)",
+                    "name": "Heading 3"
+                },
+                {
+                    "slug": "h4",
+                    "size": "var(--font-size-h4)",
+                    "name": "Heading 4"
+                },
+                {
+                    "slug": "h5",
+                    "size": "var(--font-size-h5)",
+                    "name": "Heading 5"
+                },
+                {
+                    "slug": "h6",
+                    "size": "var(--font-size-h6)",
+                    "name": "Heading 6"
+                },
+                {
+                    "slug": "small",
+                    "size": "var(--font-size-small)",
+                    "name": "Small Text"
+                },
+                {
+                    "slug": "micro-title",
+                    "size": "var(--font-size-micro-title)",
+                    "name": "Micro Title"
+                }
+            ],
+            "fontFamilies": [
+                {
+                    "fontFamily": "var(--font-family-base)",
+                    "slug": "base",
+                    "name": "Base"
+                }
+            ],
+            "color": {
+                "palette": [],
+                "custom": false
+            }
+        },
+        "blocks": {
+            "core/column": {
+                "border": {
+                    "color": true
+                }
+            },
+            "core/pullquote": {
+                "border": {
+                    "radius": false,
+                    "color": false,
+                    "style": false,
+                    "width": false
+                }
+            },
+            "core/button": {
+                "spacing": false,
+                "color": {
+                    "palette": [],
+                    "custom": false
+                },
+                "border": {
+                    "radius": false
+                }
+            },
+            "core/gallery": {
+                "spacing": {
+                    "margin": false,
+                    "padding": [
+                        "top",
+                        "bottom"
+                    ]
+                }
+            },
+            "core/group": {
+                "align": false,
+                "layout": false,
+                "position": {
+                    "sticky": false
+                },
+                "dimensions": {
+                    "minHeight": false
+                },
+                "background": {
+                    "backgroundImage": false
+                },
+                "spacing": {
+                    "blockGap": false,
+                    "margin": false,
+                    "padding": [
+                        "top",
+                        "bottom"
+                    ]
+                }
+            }
+        }
+    },
+    "styles": {
+        "typography": {
+            "fontFamily": "var(--font-family-base)",
+            "fontSize": "var(--font-size-base)",
+            "lineHeight": "var(--line-height-base)"
+        }
+    }
+}

@@ -1,0 +1,7 @@
+@use "../utils";
+
+.wp-element-button,
+.btn {
+    @include utils.resetButton;
+    @include utils.btnBase;
+}

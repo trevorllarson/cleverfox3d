@@ -1,0 +1,13 @@
+@use "../utils";
+
+.page-template-page-legal {
+    main .container {
+        max-width: 60ch;
+    }
+
+    .page-content {
+        max-width: var(--content-max-width);
+        padding-bottom: var(--block-padding);
+        margin-inline: auto;
+    }
+}

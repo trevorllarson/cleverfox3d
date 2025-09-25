@@ -1,0 +1,100 @@
+@use "sass:map";
+@use "sass:math";
+
+$grid-breakpoints: (
+    xs: 0,
+    ms: 375px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1500px,
+);
+
+@function makeRem($pxValue) {
+    @return #{math.div($pxValue, 16)}rem;
+}
+
+@function makeClamp($min, $max) {
+    @return clamp(#{makeRem($min)}, #{math.div($max, 1600) * 100}vw, #{makeRem($max)});
+}
+
+@function getMaxBreakpoint($key) {
+    @return map-get($grid-breakpoints, $key) - 1;
+}
+
+@function getBreakpoint($key) {
+    @return map-get($grid-breakpoints, $key);
+}
+
+@mixin makeContainer {
+    max-width: var(--container-max-width);
+    padding-inline: var(--container-padding);
+    margin-inline: auto;
+    box-sizing: border-box;
+}
+
+@mixin resetList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin resetButton {
+    appearance: none;
+    background: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    display: inline-block;
+    font-family: inherit;
+    color: currentColor;
+}
+
+@mixin resetField {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    appearance: none;
+}
+
+@mixin btnBase {
+    color: var(--btn-text-color);
+
+    @media (hover: hover) {
+        &:hover {
+            color: var(--btn-text-color--hover);
+        }
+    }
+}
+
+@mixin fieldBase {
+    font-size: makeRem(16);
+}
+
+@mixin selectBase {}
+
+@mixin labelBase {
+    font-size: #{makeRem(20)};
+}
+
+
+// https://www.a11yproject.com/posts/how-to-hide-content/
+@mixin visuallyHidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+@mixin focusStyle {
+    outline-color: var(--color-focus-outline, var(--color-white));
+    outline-style: solid;
+    outline-width: 1px;
+}

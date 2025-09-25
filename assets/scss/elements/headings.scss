@@ -1,0 +1,56 @@
+@use "../utils";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-family-headings);
+    font-style: normal;
+    font-weight: 400;
+    color: var(--color-headings, var(--color-text));
+    text-wrap: balance;
+    margin-block: .25em;
+
+    // don't let admin bold titles
+    strong,
+    b {
+        font-weight: inherit;
+    }
+
+    &.alignwide {
+        @include utils.makeContainer;
+    }
+}
+
+.has-h-1-font-size,
+h1 {
+    font-size: var(--font-size-h1);
+}
+
+.has-h-2-font-size,
+h2 {
+    font-size: var(--font-size-h2);
+    line-height: 1.2;
+}
+
+.has-h-3-font-size,
+h3 {
+    font-size: var(--font-size-h3);
+}
+
+.has-h-4-font-size,
+h4 {
+    font-size: var(--font-size-h4);
+}
+
+.has-h-5-font-size,
+h5 {
+    font-size: var(--font-size-h5);
+}
+
+.has-h-6-font-size,
+h6 {
+    font-size: var(--font-size-h6);
+}

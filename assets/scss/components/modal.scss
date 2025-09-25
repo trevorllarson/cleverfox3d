@@ -1,0 +1,87 @@
+.modal,
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.modal {
+    z-index: 10000;
+    display: flex;
+
+    &[aria-hidden="true"] {
+        display: none;
+    }
+}
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: auto;
+    z-index: 2;
+    position: relative;
+    background-color: var(--color-black);
+    border-radius: 0.5rem;
+    padding: var(--spacing-4);
+
+    > button {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+}
+
+.video-modal {
+    .modal-content {
+        padding: 0;
+        max-height: 90vh;
+
+        button {
+            right: -25px;
+            top: -25px;
+
+            @media (hover: hover) {
+                &:hover {
+                    color: var(--color-white);
+                }
+            }
+        }
+    }
+
+    iframe {
+        display: block;
+        width: min(80vw, 1000px);
+        height: auto;
+        aspect-ratio: 500 / 281;
+    }
+}
+
+
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(10%);
+    }
+}
+
+.dialog-overlay {
+    animation: fade-in 200ms both;
+}
+
+/**
+   * 1. Add an animation delay equal to the overlay animation duration to
+   *    wait for the overlay to appear before animation in the dialog.
+   */
+.modal-content {
+    animation: fade-in 400ms 200ms both, slide-up 400ms 200ms both;
+}
